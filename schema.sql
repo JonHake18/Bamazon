@@ -26,10 +26,25 @@ VALUES ("Basketball", "Sporting Goods", 20, 10),
 
 ("Football", "Sporting Goods", 35, 12),
 
-("Bath Towel", "Houseware", 6, 15),
+("Bath Towel", "Housewares", 6, 15),
 
 ("Impact Drill", "Hardware", 80, 6),
 
 ("Spray Paint", "Paint", 8, 14),
 
 ("Picture Frame", "Decorations", 25, 8);
+
+CREATE TABLE departments (
+	DepartmentId INT NOT NULL AUTO_INCREMENT,
+	DepartmentName VARCHAR(100) NOT NULL,
+	OverheadCost DECIMAL(10,2) NOT NULL,
+	TotalSales DECIMAL(10,2),
+	PRIMARY KEY(DepartmentId)
+);
+
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES("Sporting Goods", 500);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES("Electronics", 500);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES("Housewares", 500);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES("Hardware", 500);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES("Paint", 500);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES("Decorations", 500);
